@@ -1,0 +1,321 @@
+:root {
+  --bg: rgb(16, 16, 54);
+  --bg2: #333;
+  --font-1: 400;
+  --font-2: 500;
+  --font-bold: 700;
+}
+
+* {
+  font-family: "poppins";
+  scroll-behavior: smooth; /* Animasi scrolling halus */
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* max-width: 1140px; */
+  margin: 0 auto;
+  height: 1000px;
+  background-color: #fff;
+}
+
+nav {
+  background-color: var(--bg);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+section {
+  background-color: var(--bg);
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  max-width: 1140px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.logo a span {
+  font-weight: 700;
+  color: orange;
+}
+
+.nav-list {
+  list-style-type: none;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list .active {
+  color: orange;
+}
+
+.nav-list li {
+  margin-right: 10px;
+}
+
+.nav-list li a {
+  padding: 10px;
+  color: #fff;
+}
+
+.nav-list li a {
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden; /* Mencegah pseudo-element keluar dari batas */
+}
+
+/* animasi navlist */
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Mulai dari tengah */
+  width: 0; /* Lebar awal */
+  height: 0.15rem; /* Tinggi border */
+  background-color: orange; /* Warna border */
+  transition: all 0.3s ease; /* Animasi transisi */
+}
+
+.nav-list li a:hover::after {
+  width: 100%; /* Lebar akhir */
+  left: 0; /* Posisi akhir */
+}
+/* end animasi navlist */
+
+/* start section hero */
+
+.hero {
+  max-width: 1140px;
+  margin: 0 auto; /* biar item berada di tengah */
+  align-items: center;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hero-kiri {
+  padding-left: 0;
+  list-style: none;
+  flex: 1.5;
+  font-weight: 800;
+  font-size: 3rem;
+  font-style: italic;
+  color: white;
+}
+.hero-kiri li {
+  text-shadow: 4px 4px 2px rgba(167, 167, 167, 0.3);
+}
+
+.hero-kiri li span {
+  color: orange;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: var(--font-1);
+}
+
+.button {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: var(--font-1);
+  color: white;
+  background-color: orange;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 2px rgba(167, 167, 167, 0.3);
+}
+
+/* start animasi hover button */
+.button:hover {
+  color: orange;
+  background-color: white;
+  cursor: pointer;
+  animation: hoverMove 0.5s ease-in-out forwards;
+}
+@keyframes hoverMove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* end animasi hover button */
+
+.hero-kanan {
+  list-style: none;
+  flex: 0.5;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 10px;
+}
+
+.ukuran {
+  position: relative;
+  left: 150px;
+  width: 60%;
+}
+
+/* end section hero */
+
+.about {
+  background-color: white;
+  height: 500px;
+  padding: 100px 0px 100px 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1140px;
+  margin: 0px auto;
+}
+
+h1 {
+  color: orange;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.about p {
+  font-size: 1rem;
+  color: black;
+}
+
+footer {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  font-size: 0.8rem;
+  background-color: var(--bg);
+  color: white;
+}
+
+/* start parent  portofolio */
+.porto {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.porto h2 {
+  padding: 0px 20px;
+  color: orange;
+}
+.porto p {
+  padding: 0px 20px;
+  font-size: 1rem;
+}
+.foto {
+  width: 30rem;
+  height: 30rem;
+  border: orange 0.3rem solid;
+  border-radius: 0.8rem;
+}
+.porto .button {
+  margin: 0px 20px;
+}
+
+/* end parent */
+
+.porto1 {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: left;
+  /* border: orange 0.5rem solid;
+  border-radius: 0.8rem; */
+}
+
+.porto2 {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: right;
+  /* border: orange 0.5rem solid;
+  border-radius: 0.8rem; */
+}
+.porto2 img {
+  order: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.porto3 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+  /* border: orange 0.5rem solid;
+  border-radius: 0.8rem; */
+}
+/* end porto */
+
+/* start contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.contact h1 {
+  margin-bottom: 50px;
+}
+
+.container-icon {
+  display: flex;
+}
+.icon {
+  color: orange;
+  margin: 0px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.icon p {
+  padding-top: 0px;
+  margin-top: 0px;
+  color: orange;
+}
+/* end contact */
