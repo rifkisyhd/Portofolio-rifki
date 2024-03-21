@@ -188,6 +188,7 @@ p {
 
 /* end section hero */
 
+/* start about */
 .about {
   background-color: white;
   height: 500px;
@@ -211,6 +212,15 @@ h1 {
   font-size: 1rem;
   color: black;
 }
+
+.icon-skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: orange;
+}
+
+/* end about */
 
 footer {
   display: flex;
