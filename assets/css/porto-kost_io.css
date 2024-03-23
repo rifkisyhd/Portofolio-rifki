@@ -114,23 +114,75 @@ footer {
 }
 /* end animasi navlist */
 /* ------------------------------------------------------------------------------------- */
-.title {
+.content {
   display: flex;
   flex-direction: column;
   max-width: 1140px;
   margin: 0px auto;
   padding-top: 80px;
 }
-.title h1 {
+.content h1 {
+  padding-top: 50px;
   margin-bottom: 0px;
 }
-.title h2 {
+.content h2 {
   margin-top: 0px;
   border-bottom: 2px solid;
   padding-bottom: 50px; /* Menambahkan jarak antara teks dan border-bottom */
 }
-.title img {
-  width: 50%;
+.content img {
+  width: 1140px; /* Lebar gambar tetap 50% */
+  height: calc(50% * 16 / 9); /* Tinggi gambar disesuaikan untuk mencapai rasio 9:16 */
+  object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah rasionya */
+  object-position: center; /* Memfokuskan gambar pada bagian tengah */
   margin: 0 auto;
   border-radius: 1rem;
+}
+.penjelasan {
+  width: 65%;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+/* end penjelasan */
+/* -------------------------------------------------------------------------------- */
+.bawah {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: end;
+}
+.icon {
+  /* Style properties */
+  color: orange; /* Contoh: mengubah warna ikon */
+}
+
+/* .sebelum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sebelum p {
+  margin-left: 30px;
+} */
+.sesudah {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sesudah p {
+  margin-right: 30px;
+}
+.sesudah:hover {
+  cursor: pointer;
+  animation: hoverMove 0.5s ease-in-out forwards;
+}
+@keyframes hoverMove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
