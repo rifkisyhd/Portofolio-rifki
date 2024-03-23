@@ -1,2 +1,136 @@
+:root {
+  --bg: rgb(16, 16, 54);
+  --bg2: #333;
+  --font-1: 400;
+  --font-2: 500;
+  --font-bold: 700;
+}
+
+* {
+  font-family: "poppins";
+  scroll-behavior: smooth; /* Animasi scrolling halus */
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  /* max-width: 1140px; */
+  margin: 0 auto;
+  height: 1000px;
+  background-color: #fff;
+}
+nav {
+  background-color: var(--bg);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+footer {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0;
+  font-size: 0.8rem;
+  background-color: var(--bg);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  max-width: 1140px;
+  background-color: var(--bg);
+}
+
+.logo a {
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.logo a span {
+  font-weight: 700;
+  color: orange;
+}
+
+.nav-list {
+  list-style-type: none;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list .active {
+  color: orange;
+}
+
+.nav-list li {
+  margin-right: 10px;
+}
+
+.nav-list li a {
+  padding: 10px;
+  color: #fff;
+}
+
+.nav-list li a {
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden; /* Mencegah pseudo-element keluar dari batas */
+}
+
+/* animasi navlist */
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Mulai dari tengah */
+  width: 0; /* Lebar awal */
+  height: 0.15rem; /* Tinggi border */
+  background-color: orange; /* Warna border */
+  transition: all 0.3s ease; /* Animasi transisi */
+}
+
+.nav-list li a:hover::after {
+  width: 100%; /* Lebar akhir */
+  left: 0; /* Posisi akhir */
+}
+/* end animasi navlist */
+/* ------------------------------------------------------------------------------------- */
+.title {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin: 0px auto;
+  padding-top: 80px;
+}
+.title h1 {
+  margin-bottom: 0px;
+}
+.title h2 {
+  margin-top: 0px;
+  border-bottom: 2px solid;
+  padding-bottom: 50px; /* Menambahkan jarak antara teks dan border-bottom */
+}
+.title img {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 1rem;
 }
