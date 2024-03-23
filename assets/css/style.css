@@ -38,6 +38,18 @@ section {
   color: white;
 }
 
+footer {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0;
+  font-size: 0.8rem;
+  background-color: var(--bg);
+  color: white;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -192,7 +204,7 @@ p {
 .about {
   background-color: white;
   height: 500px;
-  padding: 100px 0px 100px 0;
+  padding: 100px 0px 50px 0px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -211,40 +223,59 @@ h1 {
   font-size: 1rem;
   color: black;
 }
-
-.icon-skill {
+.skill-logo {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+}
+.icon {
   color: orange;
-}
-
-.row-skill {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.container-sertifikat {
-  justify-content: start;
-  width: 50%;
-}
-.container-skill {
-  width: 50%;
+  margin: 0px 10px;
 }
 
 /* end about */
 
-footer {
+/* start parent sertifikat */
+.sertifikat {
+  padding-top: 0px;
+  background-color: white;
   display: flex;
-  padding: 20px;
-  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.parent-sertif p {
+  display: flex;
+  color: orange;
   justify-content: center;
-  height: 50px;
-  margin: 0;
-  font-size: 0.8rem;
-  background-color: var(--bg);
-  color: white;
+}
+.parent-sertif {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.parent-sertif img {
+  display: flex;
+  margin: 0 auto;
+  height: 350px;
+  width: 500px;
+  border: orange 0.3rem solid;
+  border-radius: 0.8rem;
+}
+/* end parent sertifikat */
+
+.sertif-kiri {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
+}
+.sertif-kanan {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* start parent  portofolio */
@@ -336,6 +367,10 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.icon:hover {
+  cursor: pointer;
+  animation: hoverMove 0.5s ease-in-out forwards;
 }
 .icon p {
   padding-top: 0px;
