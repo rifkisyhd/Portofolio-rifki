@@ -22,8 +22,8 @@ body {
   padding: 0;
   /* max-width: 1140px; */
   margin: 0 auto;
-  height: 1000px;
-  background-color: #fff;
+  min-height: 2000px;
+  background-color: var(--bg);
 }
 nav {
   background-color: var(--bg);
@@ -114,43 +114,51 @@ footer {
 }
 /* end animasi navlist */
 /* ------------------------------------------------------------------------------------- */
-.content {
+
+.hero {
   display: flex;
-  flex-direction: column;
-  max-width: 1140px;
-  margin: 0px auto;
-  padding-top: 80px;
+  padding-top: 100px;
+  min-height: 100vh;
+  justify-content: center;
+  background-image: url("../image/bg-porto-lp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center 10%; /* biar gambar turun 10% dari atas */
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0)); /* biar support chrome dan firefox */
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 80, rgba(0, 0, 0, 0)); /* buat gradient */
 }
-.content h1 {
-  padding-top: 50px;
-  margin-bottom: 0px;
+/* masking */
+.mask {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: url("../image/mask-porto-lp.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center 10%;
 }
-.content h2 {
-  margin-top: 0px;
-  border-bottom: 2px solid;
-  padding-bottom: 50px; /* Menambahkan jarak antara teks dan border-bottom */
+/* end masking */
+.title {
+  position: fixed;
+  width: 100%;
+  color: #fff;
+  margin-top: 130px;
+  text-align: center;
 }
-.content img {
-  width: 1140px; /* Lebar gambar tetap 50% */
-  height: calc(50% * 16 / 9); /* Tinggi gambar disesuaikan untuk mencapai rasio 9:16 */
-  object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah rasionya */
-  object-position: center; /* Memfokuskan gambar pada bagian tengah */
-  margin: 0 auto;
-  border-radius: 1rem;
+.title h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0px;
+  text-shadow: 5px 5px 3px rgba(1, 1, 3, 0.5);
 }
-.penjelasan {
-  width: 65%;
-  margin: 0 auto;
-  padding: 50px 0px;
-}
-/* end penjelasan */
-/* -------------------------------------------------------------------------------- */
+/* end hero */
+/* ---------------------------------------------------------------------------------------- */
 .bawah {
   max-width: 1140px;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  justify-content: end;
+  justify-content: space-between;
   padding: 20px 0px 50px 0px;
 }
 .icon {
@@ -158,14 +166,15 @@ footer {
   color: orange; /* Contoh: mengubah warna ikon */
 }
 
-/* .sebelum {
+.sebelum {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .sebelum p {
   margin-left: 30px;
-} */
+  color: white;
+}
 .sesudah {
   display: flex;
   flex-direction: row;
@@ -173,6 +182,11 @@ footer {
 }
 .sesudah p {
   margin-right: 30px;
+  color: white;
+}
+.sebelum:hover {
+  cursor: pointer;
+  animation: hoverMove 0.5s ease-in-out forwards;
 }
 .sesudah:hover {
   cursor: pointer;
