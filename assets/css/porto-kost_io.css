@@ -143,8 +143,78 @@ footer {
   margin: 0 auto;
   padding: 50px 0px;
 }
+.detail-link {
+  color: blue;
+  text-decoration: underline;
+}
+.penjelasan h2 {
+  color: orange;
+  border: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+}
+.penjelasan p {
+  margin-top: 0px;
+}
+
+/* kiri kanan */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.row .kiri {
+  max-width: 50%;
+}
+.row .kanan {
+  max-width: 50%;
+}
+/* brainstorming */
+.container-brainstroming {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.container-brainstroming h2 {
+  padding-top: 0px;
+  padding-right: 50px;
+  font-size: 50px;
+}
+.container-brainstroming p {
+  margin-bottom: 0px;
+}
+
+.brainstroming-kiri {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brainstroming-kanan {
+  width: 50%;
+  margin-left: 350px;
+  display: flex;
+  align-items: center;
+}
+/* end brainstorming */
+
+.detail-img {
+  max-width: 50%;
+  transition: 0.5s;
+  padding: 20px 0px;
+}
+.detail-img:hover {
+  transform: scale(2);
+}
+
 /* end penjelasan */
 /* -------------------------------------------------------------------------------- */
+.detail {
+  padding: 20px 0px;
+}
+/* -------------------------------------------------------------------------------- */
+
 .bawah {
   max-width: 1140px;
   display: flex;
