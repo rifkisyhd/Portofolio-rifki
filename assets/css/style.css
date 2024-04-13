@@ -50,6 +50,17 @@ footer {
   color: white;
 }
 
+h1 {
+  color: orange;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: var(--font-1);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -122,19 +133,21 @@ footer {
 /* start section hero */
 
 .hero {
+  /* position: relative; */
   max-width: 1140px;
+  max-height: 500px;
   margin: 0 auto; /* biar item berada di tengah */
-  align-items: center;
+  align-items: top;
   padding-top: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero-kiri {
+  max-width: 50%;
   padding-left: 0;
   list-style: none;
-  flex: 1.5;
+  /* flex: 1.5; */
   font-weight: 800;
   font-size: 3rem;
   font-style: italic;
@@ -146,11 +159,6 @@ footer {
 
 .hero-kiri li span {
   color: orange;
-}
-
-p {
-  font-size: 1.2rem;
-  font-weight: var(--font-1);
 }
 
 .button {
@@ -186,16 +194,17 @@ p {
 
 .hero-kanan {
   list-style: none;
-  flex: 0.5;
+  /* flex: 0.5; */
   display: flex;
   justify-content: flex-end;
   margin-left: 10px;
 }
-
-.ukuran {
+.hero-kanan img {
   position: relative;
-  left: 150px;
-  width: 60%;
+  bottom: 15px;
+  left: 180px;
+  height: 600px;
+  width: auto;
 }
 
 /* end section hero */
@@ -211,12 +220,6 @@ p {
   flex-direction: column;
   max-width: 1140px;
   margin: 0px auto;
-}
-
-h1 {
-  color: orange;
-  font-weight: 700;
-  font-size: 2.2rem;
 }
 
 .about p {
@@ -236,13 +239,13 @@ h1 {
 
 /* start parent sertifikat */
 .sertifikat {
+  max-width: 1140px;
+  display: flex;
   padding-top: 0px;
   background-color: white;
-  display: flex;
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
-  max-width: 1140px;
   margin: 0 auto;
 }
 .parent-sertif p {
@@ -251,31 +254,26 @@ h1 {
   justify-content: center;
 }
 .parent-sertif {
+  max-width: 1140px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 .parent-sertif img {
-  display: flex;
-  margin: 0 auto;
   height: 350px;
   width: 500px;
+  margin: 0 auto;
   border: orange 0.3rem solid;
   border-radius: 0.8rem;
 }
 /* end parent sertifikat */
 
 .sertif-kiri {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  flex-direction: column;
+  max-width: 50%;
 }
 .sertif-kanan {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  flex-direction: column;
+  max-width: 50%;
 }
 
 /* start parent  portofolio */
@@ -347,15 +345,137 @@ h1 {
 
 /* start contact */
 .contact {
+  background: #eaeaea;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .container {
+  max-width: 1140px;
+  width: 100%;
+  background: #fff;
+  border-radius: 1.5rem;
+  margin: 2rem 5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.contact .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+}
+.contact .content .image-box {
+  max-width: 50%;
+  margin-left: 4rem;
+}
+.contact .content .image-box img {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+.contact .content form {
+  width: 45%;
+  margin-right: 3.5rem;
+}
+form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-group .field {
+  height: 50px;
+  display: flex;
+  position: relative;
+  margin: 1rem;
+  width: 100%;
+}
+/* icon di dalam input field */
+form i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: rgb(51, 51, 51);
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+/* text di dalam input field */
+form .field input,
+form .message textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 16px 0 48px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: 1px solid rgb(51, 51, 51);
+  background: #eaeaea;
+  color: black;
+}
+.field input::placeholder,
+.message textarea::placeholder {
+  color: rgb(51, 51, 51);
+}
+.field input:focus,
+.message textarea:focus {
+  padding-left: 47px;
+  border: 2px solid orange;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i {
+  color: orange;
+}
+form .message {
+  position: relative;
+  margin: 1rem;
+  width: 100%;
+  max-width: 350px;
+}
+form .message i {
+  top: 25px;
+  font-size: 20px;
+  left: 15px;
+}
+form .message textarea {
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 12px 20px 0 48px;
+}
+form .message textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+.content .button {
+  font-size: 1.2rem;
+  float: right;
+}
+.button i {
+  position: relative;
+  top: 10px;
+  left: 2px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  color: #fff;
+}
+.button:hover i {
+  left: 8px;
+  color: orange;
+}
+/* end contact */
+
+/* start connect */
+.connect {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  max-width: 1140px;
-  margin: 0 auto;
+  background-color: var(--bg);
 }
-.contact h1 {
+.connect h1 {
   margin-bottom: 50px;
 }
 
@@ -364,7 +484,7 @@ h1 {
 }
 .icon {
   color: orange;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -378,4 +498,79 @@ h1 {
   margin-top: 0px;
   color: orange;
 }
-/* end contact */
+/* end connect */
+
+/* respossive */
+@media screen and (max-width: 476px) {
+  nav {
+    position: sticky;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 0px;
+  }
+
+  .hero-kiri {
+    max-width: 100%;
+    margin: 0 20px;
+    justify-content: center;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .hero-kanan {
+    display: none;
+  }
+  .about p {
+    margin: 0px 20px;
+    justify-content: center;
+  }
+
+  .sertifikat h1 {
+    margin-top: 100px;
+  }
+  .sertif-kiri {
+    max-width: 100%;
+  }
+  .sertif-kanan {
+    max-width: 100%;
+  }
+  .parent-sertif {
+    flex-direction: column;
+    align-content: center;
+  }
+  .parent-sertif img {
+    width: 300px;
+    height: auto;
+  }
+  .porto {
+    max-width: 100%;
+  }
+  .porto1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .foto {
+    width: 15em;
+    height: auto;
+  }
+  .porto2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .porto2 img {
+    order: 0;
+    width: 15em;
+    height: auto;
+  }
+  .porto3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
