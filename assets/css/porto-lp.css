@@ -202,3 +202,15 @@ footer {
     transform: translateY(-5px);
   }
 }
+
+@media screen and (max-width: 476px) {
+  nav {
+    position: sticky;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+
+}
