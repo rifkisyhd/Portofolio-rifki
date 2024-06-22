@@ -330,7 +330,7 @@ p {
 .porto2 img {
   order: 1;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .porto3 {
