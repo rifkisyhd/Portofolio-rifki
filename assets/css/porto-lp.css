@@ -153,6 +153,86 @@ footer {
 }
 /* end hero */
 /* ---------------------------------------------------------------------------------------- */
+
+.penjelasan {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.penjelasan h1 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+  color: orange;
+}
+
+.penjelasan h2{
+  color: orange;
+}
+
+.penjelasan p{
+  color: white;
+}
+
+.penjelasan a{
+  color: orange;
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.row .pertama{
+  width: 25%;
+}
+.row .kedua{
+  width: 25%;
+}
+.row .ketiga{
+  width: 25%;
+}
+.row .keempat{
+  width: 25%;
+}
+
+.penjelasan .research{
+  margin-top: 150px;
+}
+
+.research p{
+  color: white;
+  text-align: center;
+}
+
+.research a{
+  color: orange;
+  text-decoration: underline;
+}
+
+.detail-link{
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.detail-img {
+  display: flex;
+  margin: 0 auto;
+  max-width: 50%;
+  transition: 0.5s;
+  padding: 20px 0px;
+}
+.detail-img:hover {
+  transform: scale(2);
+}
+
+
+/* end penjelasan */
+/* ---------------------------------------------------------------------------------------- */
 .bawah {
   max-width: 1140px;
   display: flex;
