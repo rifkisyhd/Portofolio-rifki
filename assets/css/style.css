@@ -555,7 +555,7 @@ form .message textarea::-webkit-scrollbar {
   }
   .foto,
   .porto2 img {
-    width: 15em; /* Menyesuaikan ukuran gambar */
+    max-width: 15em; /* Menyesuaikan ukuran gambar */
     height: auto;
     order: 0;
   }
