@@ -76,6 +76,10 @@ footer {
   display: flex;
 }
 
+.menu-toggle{
+  display: none;
+}
+
 .nav-list .active {
   color: orange;
 }
@@ -286,11 +290,95 @@ footer {
 @media screen and (max-width: 476px) {
   nav {
     position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg);
+    width: 100%;
   }
 
   .nav-list {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg);
   }
 
+  .hero {
+    padding-top: 0px;
+  }
 
+  .menu-toggle {
+    color: white;
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: var(--bg);
+    padding: 10px 0;
+  }
+
+  .nav-list a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-list a:hover {
+    background-color: orange;
+    color: white;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .penjelasan {
+    padding-top: 30px;
+    padding: 0 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .row .pertama,
+  .row .kedua,
+  .row .ketiga,
+  .row .keempat {
+    width: 100%;
+  }
+
+  .detail-img {
+    max-width: 80%;
+  }
+
+  .bawah {
+    padding: 0 20px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sebelum,
+  .sesudah {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sebelum p,
+  .sesudah p {
+    margin: 10px 0;
+  }
 }

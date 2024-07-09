@@ -8,6 +8,14 @@ document.addEventListener("visibilitychange", function () {
   }
 });
 
+// navbar responsive
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+mobileMenu.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
+
 // navbar menu active
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-list a");
