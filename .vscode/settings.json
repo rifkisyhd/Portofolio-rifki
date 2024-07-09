@@ -1,3 +1,4 @@
 {
-  "livePreview.defaultPreviewPath": "/Portofolio/html/index.html"
+  "livePreview.defaultPreviewPath": "/Portofolio/html/index.html",
+  "editor.minimap.autohide": true
 }

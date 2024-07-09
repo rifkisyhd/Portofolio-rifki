@@ -287,7 +287,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 476px) {
+/* MARK:responsive 
+*/
+@media screen and (max-width: 768px) {
   nav {
     position: sticky;
     top: 0;
@@ -379,6 +381,6 @@ footer {
 
   .sebelum p,
   .sesudah p {
-    margin: 10px 0;
+    margin: 10px 20px;
   }
 }

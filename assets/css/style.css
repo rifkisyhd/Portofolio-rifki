@@ -504,8 +504,9 @@ form .message textarea::-webkit-scrollbar {
 }
 /* end connect */
 
-/* respossive */
-@media screen and (max-width: 476px) {
+
+/* responsive */
+@media screen and (max-width: 768px) {
   nav {
     position: sticky;
     top: 0;
@@ -520,10 +521,6 @@ form .message textarea::-webkit-scrollbar {
     align-items: center;
     width: 100%;
     background-color: var(--bg);
-  }
-
-  .hero {
-    padding-top: 0px;
   }
 
   .menu-toggle {
@@ -552,6 +549,10 @@ form .message textarea::-webkit-scrollbar {
   .nav-list a:hover {
     background-color: orange;
     color: white;
+  }
+
+  .hero {
+    padding-top: 0px;
   }
 
   .hero-kiri {
@@ -635,8 +636,8 @@ form .message textarea::-webkit-scrollbar {
   }
   form .message {
     margin: 1rem;
-    left: -30px;
-    width: 300px;
+    left: 0px;
+    width: 100%;
   }
   .content .button {
     width: 100%;

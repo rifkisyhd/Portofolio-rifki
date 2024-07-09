@@ -68,6 +68,10 @@ footer {
   color: orange;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 .nav-list {
   list-style-type: none;
   font-size: 1rem;
@@ -130,13 +134,13 @@ footer {
   border-bottom: 2px solid;
   padding-bottom: 50px; /* Menambahkan jarak antara teks dan border-bottom */
 }
-.content img {
-  width: 1140px; /* Lebar gambar tetap 50% */
+.thumbnail {
+  width: 100%;
   height: calc(50% * 16 / 9); /* Tinggi gambar disesuaikan untuk mencapai rasio 9:16 */
   object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah rasionya */
   object-position: center; /* Memfokuskan gambar pada bagian tengah */
   margin: 0 auto;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 }
 .penjelasan {
   width: 65%;
@@ -220,22 +224,24 @@ footer {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  justify-content: end;
+  justify-content: stretch;
   padding: 20px 0px 50px 0px;
 }
+
 .icon {
   /* Style properties */
   color: orange; /* Contoh: mengubah warna ikon */
 }
 
-/* .sebelum {
+.sebelum {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .sebelum p {
   margin-left: 30px;
-} */
+}
+
 .sesudah {
   display: flex;
   flex-direction: row;
@@ -259,7 +265,8 @@ footer {
   }
 }
 
-/* responsive */
+/* MARK: responsive 
+*/
 @media screen and (max-width: 768px) {
   nav {
     position: sticky;
@@ -282,7 +289,7 @@ footer {
     display: block;
     cursor: pointer;
   }
-  
+
   .nav-list.active {
     display: flex;
     flex-direction: column;
@@ -317,7 +324,10 @@ footer {
   }
   .content img {
     width: 90%;
+    position: static;
+    border-radius: 1rem;
   }
+
   .penjelasan {
     width: 100%;
     margin: 0px auto;
@@ -336,8 +346,25 @@ footer {
   .brainstroming-kiri {
     width: 100%;
   }
-.brainstroming-kanan {
+  .brainstroming-kanan {
     margin-left: 0px;
     width: 100%;
+  }
+
+  .bawah {
+    padding: 0 20px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sebelum,
+  .sesudah {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sebelum p,
+  .sesudah p {
+    margin: 10px 20px;
   }
 }
