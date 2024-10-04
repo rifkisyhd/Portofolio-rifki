@@ -1,1 +1,5 @@
-portofolio yang sudah fix terus mau di hosting
+portofolio ini dibuat menggunakan 
+
+HTML
+CSS Native
+Javascript Native
